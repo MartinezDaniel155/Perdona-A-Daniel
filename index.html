@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Me perdonas? 🥺</title>
+
+  <!-- Tipografías: Pacifico (título) y Nunito (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Corazones flotando de fondo (los crea script.js) -->
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <main class="card" id="card">
+    <!-- Sticker original: un osito que llora y se pone feliz al decir "Sí" -->
+    <div class="sticker" id="sticker" aria-hidden="true">
+      <svg viewBox="0 0 160 150" xmlns="http://www.w3.org/2000/svg">
+        <!-- Orejas -->
+        <circle cx="38" cy="38" r="24" fill="#c98b5e" />
+        <circle cx="38" cy="38" r="12" fill="#f6d3b5" />
+        <circle cx="122" cy="38" r="24" fill="#c98b5e" />
+        <circle cx="122" cy="38" r="12" fill="#f6d3b5" />
+        <!-- Cabeza, hocico y nariz -->
+        <ellipse cx="80" cy="88" rx="62" ry="54" fill="#d9a073" />
+        <ellipse cx="80" cy="106" rx="27" ry="21" fill="#f6d3b5" />
+        <ellipse cx="80" cy="97" rx="8" ry="5.5" fill="#5a2a3c" />
+        <!-- Mejillas -->
+        <ellipse cx="42" cy="100" rx="9" ry="5.5" fill="#ff8fb1" opacity="0.65" />
+        <ellipse cx="118" cy="100" rx="9" ry="5.5" fill="#ff8fb1" opacity="0.65" />
+
+        <!-- Carita triste (por defecto) -->
+        <g class="face-sad">
+          <circle cx="56" cy="80" r="7" fill="#3b1f2b" />
+          <circle cx="58.5" cy="77.5" r="2.4" fill="#fff" />
+          <circle cx="104" cy="80" r="7" fill="#3b1f2b" />
+          <circle cx="106.5" cy="77.5" r="2.4" fill="#fff" />
+          <path d="M46 71 L66 63 M114 71 L94 63" stroke="#3b1f2b" stroke-width="4" stroke-linecap="round" fill="none" />
+          <path d="M70 121 Q80 112 90 121" stroke="#5a2a3c" stroke-width="3.5" stroke-linecap="round" fill="none" />
+          <path class="tear" d="M52 92 Q47 101 52 105 Q57 101 52 92 Z" fill="#8fd3ff" />
+        </g>
+
+        <!-- Carita feliz (aparece al hacer clic en "Sí") -->
+        <g class="face-happy">
+          <path d="M48 82 Q56 70 64 82 M96 82 Q104 70 112 82" stroke="#3b1f2b" stroke-width="4.5" stroke-linecap="round" fill="none" />
+          <path d="M68 113 Q80 128 92 113 Z" fill="#c4374f" stroke="#5a2a3c" stroke-width="3" stroke-linejoin="round" />
+        </g>
+      </svg>
+    </div>
+
+    <h1 id="title">¿Me perdonas? 🥺</h1>
+    <p class="subtitle" id="subtitle">Sé que me equivoqué y lo siento muchísimo…</p>
+
+    <div class="actions" id="actions">
+      <button type="button" id="btn-yes" class="btn btn-yes">Sí</button>
+      <button type="button" id="btn-no" class="btn btn-no">No</button>
+    </div>
+
+    <p class="message" id="message" hidden>¡Sabía que me perdonarías! ❤️✨</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
